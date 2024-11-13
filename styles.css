@@ -1,0 +1,64 @@
+body {
+  align-items: center;
+  background: #0a0a1a;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  margin: 0;
+}
+
+.animated-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: inline-flex;
+}
+.animated-button:focus {
+  outline: none;
+}
+
+.button-svg {
+  overflow: visible;
+}
+.button-svg .button-bg {
+  fill: #EE3769;
+}
+.button-svg .button-outline-default {
+  fill: none;
+  stroke: url(#borderGradient);
+  stroke-width: 1.5;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+.button-svg .button-outline-hover {
+  fill: none;
+  stroke: url(#borderGradientHover);
+  stroke-width: 1.5;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.button-svg .button-text {
+  fill: white;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+@keyframes shimmer {
+  to {
+    transform: translateX(50%);
+  }
+}
+#borderGradientHover {
+  animation: shimmer 2s alternate infinite;
+}
+
+.animated-button:hover .button-outline-default {
+  opacity: 0;
+}
+.animated-button:hover .button-outline-hover {
+  opacity: 1;
+}
+
+/*# sourceMappingURL=styles.css.map */

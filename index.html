@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Button</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <button class="animated-button">
+        <svg class="button-svg" preserveAspectRatio="xMidYMid meet">
+            <defs>
+                <linearGradient id="borderGradient" x1="100%" y1="0%" x2="0%" y2="0%">
+                    <stop offset="0%" stop-color="#FFFFFF"/>
+                    <stop offset="0.3%" stop-color="#EC9FE2"/>
+                    <stop offset="20.61%" stop-color="rgba(255, 255, 255, 0)"/>
+                    <stop offset="93.96%" stop-color="rgba(255, 255, 255, 0.24)"/>
+                </linearGradient>
+                
+                <linearGradient id="borderGradientHover" x1="100%" y1="0%" x2="-100%" y2="0%" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#FFFFFF"/>
+                    <stop offset="20%" stop-color="#EC9FE2"/>
+                    <stop offset="40%" stop-color="#AA237A"/>
+                    <stop offset="60%" stop-color="#BA205A"/>
+                    <stop offset="80%" stop-color="#EC9FE2"/>
+                    <stop offset="100%" stop-color="#FFFFFF"/>
+                    <!-- Repeat for seamless loop -->
+                    <stop offset="120%" stop-color="#EC9FE2"/>
+                    <stop offset="140%" stop-color="#AA237A"/>
+                    <stop offset="160%" stop-color="#BA205A"/>
+                    <stop offset="180%" stop-color="#EC9FE2"/>
+                    <stop offset="200%" stop-color="#FFFFFF"/>
+                </linearGradient>
+            </defs>
+            
+            <g class="button-content">
+                <!-- Background and borders will be positioned relative to text -->
+                <text class="button-text" x="50%" y="50%" text-anchor="middle" dominant-baseline="middle">Get started</text>
+            </g>
+        </svg>
+    </button>
+
+    <!-- Add script at the end of body -->
+    <script src="script.js"></script>
+</body>
+</html> 
